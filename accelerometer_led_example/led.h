@@ -1,3 +1,19 @@
+/*
+LEDs 1 to 4 are connected to PJ.0, PJ.1, PJ.2 and PJ.3.
+LEDs 5 to 8 are connected to P3.4, P3.5, P3.6 and P3.7.
+
+Pins of Port 3 are also available as physical headers. So, working can also be verified by measuring voltage.
+
+The LEDonboardInit function has 3 modes:
+1) Using LEDs of only PJ.
+2) using LEDs of only P3.
+3) Using LEDs of both PJ and P3.
+
+*** Usage ***
+LED_on(number);
+LED_off(number);
+*/
+
 void LEDonboardInit(int x)
 {
   if(x==1)
