@@ -13,36 +13,36 @@ void main(void)
 
     while(1)
 	{  
-          if (ADCResult_X < CalValue_X - 60)        
+          if (ADCResult_X < CalValue_X - 30)        
           {
           LED_off_all();
           LED_on(7);
           }
-          else if((ADCResult_X > (CalValue_X - 60)) && (ADCResult_X < (CalValue_X-40)))
+          else if((ADCResult_X > (CalValue_X - 30)) && (ADCResult_X < (CalValue_X-20)))
           {
             LED_off_all();
             LED_on(6);
           }
-          else if((ADCResult_X > (CalValue_X - 40)) && (ADCResult_X < (CalValue_X-20)))
+          else if((ADCResult_X > (CalValue_X - 20)) && (ADCResult_X < (CalValue_X-10)))
           {
             LED_off_all();
             LED_on(5);
           }
-          else if((ADCResult_X > (CalValue_X - 20)) && (ADCResult_X < (CalValue_X+20)))
+          else if((ADCResult_X > (CalValue_X - 10)) && (ADCResult_X < (CalValue_X+10)))
           {
             LED_off_all();
           }
-          else if((ADCResult_X < (CalValue_X + 40)) && (ADCResult_X > (CalValue_X+20)))
+          else if((ADCResult_X < (CalValue_X + 20)) && (ADCResult_X > (CalValue_X+10)))
           {
             LED_off_all();
             LED_on(4);
           }
-          else if((ADCResult_X < (CalValue_X + 60)) && (ADCResult_X > (CalValue_X+40)))
+          else if((ADCResult_X < (CalValue_X + 30)) && (ADCResult_X > (CalValue_X+20)))
           {
             LED_off_all();
             LED_on(3);
           }
-          else if(ADCResult_X > CalValue_X+60)
+          else if(ADCResult_X > CalValue_X+30)
           {
             LED_off_all();
             LED_on(2);
