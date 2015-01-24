@@ -1,3 +1,12 @@
+/*
+This program turns on the on-board LEDs in response to the accelerometer reading.
+
+LEDs 7 to 2 are used.
+
+Talking of X-axis, if the accelerometer is at a position close to its caliberated axis, then all LEDs will be off.
+The LEDs are turned on according to the tilt. More the tilt, the farther LED will be turned on.
+*/
+
 #include "msp430fr5739.h"
 #include "led.h"
 #include "accel.h"
@@ -21,31 +30,31 @@ void main(void)
           LED_off_all();
           LED_on(7);
           }
-          else if((ADCResult_X > (CalValue_X - 60)) && (ADCResult_X < (CalValue_X-40)))
+          else if((ADCResult_X > (CalValue_X - 60)) && (ADCResult_X < (CalValue_X - 40)))
           {
             LED_off_all();
             LED_on(6);
           }
-          else if((ADCResult_X > (CalValue_X - 40)) && (ADCResult_X < (CalValue_X-20)))
+          else if((ADCResult_X > (CalValue_X - 40)) && (ADCResult_X < (CalValue_X - 20)))
           {
             LED_off_all();
             LED_on(5);
           }
-          else if((ADCResult_X > (CalValue_X - 20)) && (ADCResult_X < (CalValue_X+20)))
+          else if((ADCResult_X > (CalValue_X - 20)) && (ADCResult_X < (CalValue_X + 20)))
           {
             LED_off_all();
           }
-          else if((ADCResult_X < (CalValue_X + 40)) && (ADCResult_X > (CalValue_X+20)))
+          else if((ADCResult_X < (CalValue_X + 40)) && (ADCResult_X > (CalValue_X + 20)))
           {
             LED_off_all();
             LED_on(4);
           }
-          else if((ADCResult_X < (CalValue_X + 60)) && (ADCResult_X > (CalValue_X+40)))
+          else if((ADCResult_X < (CalValue_X + 60)) && (ADCResult_X > (CalValue_X + 40)))
           {
             LED_off_all();
             LED_on(3);
           }
-          else if(ADCResult_X > CalValue_X+60)
+          else if(ADCResult_X > CalValue_X + 60)
           {
             LED_off_all();
             LED_on(2);
