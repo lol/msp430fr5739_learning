@@ -5,6 +5,9 @@ LEDs 7 to 2 are used.
 
 Talking of X-axis, if the accelerometer is at a position close to its caliberated axis, then all LEDs will be off.
 The LEDs are turned on according to the tilt. More the tilt, the farther LED will be turned on.
+
+CalValue_X, CalValue_Y and CalValue_Z store the initial calibrated values by CalibrateADC() function.
+ADCResult_X, ADCResult_Y and ADCResult_Z store the current ADC values.
 */
 
 #include "msp430fr5739.h"
